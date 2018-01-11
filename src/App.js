@@ -23,7 +23,7 @@ class App extends Component {
         YTSearch(
             {
                 key: API_KEY,
-                term: keyword,
+                term: keyword,  // MUST use "term" for this API
             },
             (videos) => {
                 //console.log(videos);
