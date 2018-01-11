@@ -13,7 +13,7 @@ class VideoList extends Component {
         });
 
         return (
-            <ul>
+            <ul className="col-md-4 list-group">
                 {videoListItem}
             </ul>
         );
