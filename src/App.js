@@ -17,14 +17,13 @@ class App extends Component {
             videos: [],
             selectedVideo: null,
         };
-        this.onSearchChange = this.onSearchChange.bind(this);
         this.onSearchChange('');
     }
     onSearchChange(keyword) {
         YTSearch(
             {
                 key: API_KEY,
-                keyword: keyword,
+                term: keyword,
             },
             (videos) => {
                 //console.log(videos);
@@ -40,7 +39,7 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <div>
-                    <SearchBar onSearchChange={this.onSearchChange}/>
+                    <SearchBar onSearchChange={(keyword) => this.onSearchChange(keyword)}/>
                     <VideoDetail video={this.state.selectedVideo} />
                     <VideoList
                         videos={this.state.videos}
