@@ -20,6 +20,14 @@
     float: left;
 }
 
+.App-author {
+    font-size: 1em;
+    color: #dddddd;
+    float: right;
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
 .App-intro {
     font-size: large;
 }

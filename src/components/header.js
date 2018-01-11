@@ -7,6 +7,7 @@ class Header extends Component {
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1 className="App-title">Simple YouTube</h1>
+                <h2 className="App-author">by Xinhe Zhang</h2>
             </header>
         );
     }
