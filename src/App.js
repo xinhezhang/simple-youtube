@@ -17,6 +17,7 @@ class App extends Component {
             videos: [],
             selectedVideo: null,
         };
+        this.onSearchChange = this.onSearchChange.bind(this);
         this.onSearchChange('');
     }
     onSearchChange(keyword) {
@@ -39,9 +40,12 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <div>
-                    <SearchBar onSearchChange={this.onSearchChange('')}/>
+                    <SearchBar onSearchChange={this.onSearchChange}/>
                     <VideoDetail video={this.state.selectedVideo} />
-                    <VideoList videos={this.state.videos} />
+                    <VideoList
+                        videos={this.state.videos}
+                        onVideoSelect={(selectedVideo) => this.setState({selectedVideo})}
+                    />
                 </div>
             </div>
         );
