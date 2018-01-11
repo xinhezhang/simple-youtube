@@ -35,11 +35,13 @@ class App extends Component {
         );
     }
     render() {
+        const onSearchChange = _.debounce((term) => { this.onSearchChange(term) }, 500);
+
         return (
             <div className="App">
                 <Header />
                 <div>
-                    <SearchBar onSearchChange={(keyword) => this.onSearchChange(keyword)}/>
+                    <SearchBar onSearchChange={onSearchChange}/>
                     <VideoDetail video={this.state.selectedVideo} />
                     <VideoList
                         videos={this.state.videos}

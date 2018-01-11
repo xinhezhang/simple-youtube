@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class VideoListItem extends Component {
     render() {
         const video = this.props.video;
+        //console.log(video);
         const onVideoSelect = this.props.onVideoSelect;
         const imageUrl = video.snippet.thumbnails.default.url;
 
