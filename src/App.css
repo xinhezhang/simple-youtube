@@ -18,13 +18,14 @@
     font-size: 1.5em;
     color: #61dafb;
     float: left;
+    padding-top: 16px;
 }
 
 .App-author {
     font-size: 1em;
     color: #dddddd;
     float: right;
-    padding-top: 10px;
+    padding-top: 22px;
     margin-right: 20px;
 }
 
